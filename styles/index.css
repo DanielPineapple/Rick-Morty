@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&family=Single+Day&display=swap');
+
+html {
+    background-color: black;
+    font-family: 'Single Day';
+}
+
+/* Header */
+
+header {
+    background: linear-gradient(to right, rgb(147, 224, 30) , rgba(147, 224, 30, 0.311), rgba(147, 224, 30, 0));
+    padding: 0.5rem;
+    border-radius: 50px;
+    font-family: 'Single Day';
+}
+
+.estrellas{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+    .star_champions{
+        position: absolute;
+        padding-top: 80px;
+        
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .navbar__logo {
+        cursor: pointer;
+        margin-right: auto;
+    }
+    
+    .navbar__logo img {
+        height: 70px;
+        max-width: 300px;
+        transition: all 0.3s;
+    }
+    
+    .navbar__logo img:hover{
+        transform: scale(1.1);
+    }
+
+    .navbar__menu {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .navbar__link {
+        font-size: 1.3em;
+        padding: 0.8rem 1.6rem;
+        display: inline-block;
+        transition: background .3s ease-in-out;
+        position: relative;
+        font-weight:bold; 
+        font-size: 25px; 
+        color: rgb(181, 100, 243); 
+        text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68, 6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68;
+        }
+    
+    
+    
+    .navbar__link:hover {
+        background-color: white;
+        border-radius: 50px;
+}
+
+    /* HERO */
+
+    .hero {
+        background-image: url(../img/Imagen\ de\ WhatsApp\ 2023-12-28\ a\ las\ 00.06.06_9bfe3a2c.jpg);
+        padding: 16rem;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+        border-radius: 50px;
+
+}
+
+    .hero::before {
+        content: '';
+        background-color: rgba(0, 0, 0, 0);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backdrop-filter: blur(2px) brightness(.9);
+    }
+
+    .hero__content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: start;
+        z-index: 2;
+        position: relative;
+}
+
+    .hero__title {
+        text-align: center; 
+        font-family: 'Single Day'; 
+        font-weight:bold; 
+        font-size: 70px; 
+        color: rgb(181, 100, 243); 
+        text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68, 6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68;
+        }
+    
+    
+
+    .hero__text {
+        text-align: center; 
+        font-family: 'Single Day'; 
+        font-weight:bold; 
+        font-size: 40px; 
+        color: rgb(181, 100, 243); 
+        text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68, 6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68;
+        }
+
+        .main-container {
+            justify-content: center;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .title_personajes {
+            color: white;
+            text-align: center;
+        }
+    
+
+        .contenido {
+            display: flex;
+        }
+
+
+        #personajes {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .personaje {
+            color: white;
+            margin: 50px;
+            border: 2px solid greenyellow;
+            border-radius: 13px;
+}

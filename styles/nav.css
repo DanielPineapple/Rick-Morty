@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&family=Single+Day&display=swap');
+
+.menu {
+    display:none;
+}
+
+.menu button{
+    
+    margin-left: 70%;
+    font-weight: 700;
+    color: black;
+    padding: 9px 25px;
+    background: whitesmoke;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.menu button:hover{
+    background-color:white;
+    color: red;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 800px){
+    .navbar__menu {
+        display: none;
+    }
+    .menu {
+        display: inherit;
+    }
+}
+
+.header a{
+    text-decoration: none;  
+    /*borramos el que teniamos en .header .nav-links a*/ 
+}
+
+.header .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    background-color: black;
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+
+}
+
+.header .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+.header .overlay a{
+    padding: 15px;
+    font-size: 36px;
+    display:block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color: white;
+}
+
+.header .overlay a:hover, 
+.header .overlay a:focus{
+    color: red;
+}
+
+.header .overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+
+@media screen and (max-height:450px) {
+.header    .overlay a{
+        font-size: 20px;
+    }
+.header    .overlay .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}

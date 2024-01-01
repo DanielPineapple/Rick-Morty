@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick | & | Morty</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/nav.css">
+</head>
+<body>
+    <header class="header">  <!-- Inicio Header-->
+        <div class="estrellas">
+            <picture class="star_champions">
+                <img src="./img/1star.png" alt="Tres estrellas">
+                <img src="./img/2star.png" alt="Tres estrellas">
+                <img src="./img/3star.png" alt="Tres estrellas">
+            </picture>
+        </div>
+        <nav class="navbar">
+            <picture class="navbar__logo">
+            <a href="index.html">
+                <img src="./img/Imagen de WhatsApp 2023-12-24 a las 15.23.35_55b9b89a.png" alt="logo Rick & Morty">
+            </a>
+            </picture>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a class="navbar__link" href="#PROYECT" data-ancla="PROYECTO">PROYECT</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="#CONTACT" data-ancla="CONTACT">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+
+        <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+<!---->        <div id="mobile-menu" class="overlay">
+<!---->            <a onclick="closeNav()" class="close">&times;</a>
+<!---->            <div class="overlay-content">
+<!---->                <a href="#PROYECT" data-ancla="PROYECT">PROYECT</a>
+<!---->                <a href="#CONTACT" data-ancla="CONTACT">CONTACT</a>
+<!---->            </div>
+<!---->        </div>
+    </header>
+    <!-- Fin Header e inicio de baner -->
+    <section class="hero">
+        <article class="hero__content container">
+            <h3 class="hero__title">Bienvenidos!</h3>
+            <p class="hero__text">Conoce los personajes de Rick and Morty</p>
+        </article>
+    </section>
+        <!--Inicio Collection-->
+        <main class="main-container">
+            <h1 class="title_personajes">Personajes</h1>
+            <section class="contenido">
+                <div id="personajes">
+                </div>
+            </section>
+    <SCript src="/js/api.js"></SCript>
+    <script type="text/javascript" src="/js/nav.js"></script>
+</body>
+</html>
