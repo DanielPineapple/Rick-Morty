@@ -51,11 +51,32 @@
         <!--Inicio Collection-->
         <main class="main-container">
             <h1 class="title_personajes">Personajes</h1>
+            <div class="filtros">
+                <ul class="filtros__list">
+                <li id="filtroTodo">
+                    <a class="filtro__button">Todos</a>
+                </li>
+                <li id="filtroMujer">
+                    <a class="filtro__button">Mujeres</a>
+                </li>
+                <li id="filtroHombre">
+                    <a class="filtro__button">Hombres</a>
+                </li>
+                <li id="filtroUnknown">
+                    <a class="filtro__button">Unknown</a>
+                </li>
+                </ul>
+            </div>
             <section class="contenido">
                 <div id="personajes">
                 </div>
             </section>
-    <SCript src="/js/api.js"></SCript>
+            <footer class="footer">
+                <p class="text__foot">Realizado por Daniel Alberto Piña Tirado</p>
+                <p class="text__foot">Enero 2024</p>
+            </footer>
+    <script src="/js/api.js"></script>
     <script type="text/javascript" src="/js/nav.js"></script>
+    <script src="/js/filtros.js"></script>
 </body>
 </html>
