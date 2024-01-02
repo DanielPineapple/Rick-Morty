@@ -76,6 +76,8 @@ align-items: center;
     /* HERO */
 
     .hero {
+        display: flex;
+        flex-wrap: wrap;
         background-image: url(../img/Imagen\ de\ WhatsApp\ 2023-12-28\ a\ las\ 00.06.06_9bfe3a2c.jpg);
         padding: 16rem;
         background-position: center;
@@ -99,6 +101,8 @@ align-items: center;
 
     .hero__content {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
         flex-direction: column;
         gap: 2rem;
         align-items: start;
@@ -181,6 +185,12 @@ align-items: center;
             margin: 50px;
             border: 2px solid greenyellow;
             border-radius: 13px;
+            padding: 10px;
+}
+
+.paginado {
+    display: flex;
+    justify-content: center;
 }
 
 footer {
@@ -188,11 +198,23 @@ footer {
     color: white;
     width: 100%;
     height: 300px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.text__cred {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .text__foot {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     padding: 50px;
+}
+
+.logo__foot {
+    width: 200px;
+    height: 200px;
 }

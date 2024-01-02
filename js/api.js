@@ -41,15 +41,14 @@ function pedidoFetch (pagina) {
     })
 };
 
+// Paginado
+
 pedidoFetch(paginaActual);
 
+botonPrimeraPagina.disabled=true;
+botonAnteriorPagina.disabled=true;
 
 
-// function controlPaginado (pagina){
-// // agregar los controles de todas las situaciones posibles
-// }
-
-// Paginado
 function siguientePagina () {
     paginaActual++;
     if(paginaActual===42){
@@ -60,26 +59,26 @@ function siguientePagina () {
         botonPrimeraPagina.disabled=false;
     }
     pedidoFetch(paginaActual);
-    // console.log(paginaActual)
+    
 };
 
 function anteriorPagina () {
     paginaActual--;
     pedidoFetch(paginaActual);
-    // console.log(paginaActual)
+    
 };
 
 function primeraPagina () {
     paginaActual=1;
     pedidoFetch(1)
-    // console.log(paginaActual)
+    
 }
 
 // 42 paginas
 function ultimaPagina () {
     paginaActual=42;
     pedidoFetch(paginaActual);
-    // console.log(paginaActual)
+    
 }
 
 

@@ -42,6 +42,3 @@ botonFiltroMujer.addEventListener('click',filtroMujer);
 botonFiltroHombre.addEventListener('click',filtroHombre);
 botonFiltroTodo.addEventListener('click',filtroTodo);
 botonFiltroUnknown.addEventListener('click', filtroUnknown);
-
-botonPrimeraPagina.disabled=true;
-botonAnteriorPagina.disabled=true;
