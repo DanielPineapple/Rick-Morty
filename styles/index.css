@@ -14,6 +14,14 @@ header {
     font-family: 'Single Day';
 }
 
+@media only screen and (max-width: 500px) {
+    
+    header {
+        width: 360px;
+    }
+}
+
+
 
 .estrellas{
 display: flex;
@@ -92,10 +100,7 @@ align-items: center;
     
     .hero {
         width: 360px;
-    }
-
-    .hero__content {
-        width: 360px;
+        height: 450px;
     }
 }
 
@@ -119,6 +124,12 @@ align-items: center;
         align-items: start;
         z-index: 2;
         position: relative;
+}
+
+@media only screen and (max-width: 600px) {
+    .hero__content {
+        width: 360px;
+    }
 }
 
     .hero__title {
@@ -197,6 +208,12 @@ align-items: center;
             border: 2px solid greenyellow;
             border-radius: 13px;
             padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .personaje {
+        width: 100%;
+    }
 }
 
 .paginado {
