@@ -10,11 +10,9 @@ let botonUltimaPagina = document.getElementById('ultimaPagina');
 let totalPersonajes;
 let paginaActual=1;
 
-// funcion para mostrar los personajes en el html
+// funcion para mostrar los personajes
 function mostrarEnElHtml (arrPersonajes) {
-    // estamos limpiando lo que habia antes en el div
     divPersonajes.innerHTML='';
-    // ahora le agregamos los personajes nuevos que queres mostrar
     arrPersonajes.forEach((itemPersonaje)=>{
         divPersonajes.innerHTML+=` <div class="personaje hvr-wobble-to-bottom-right" data-aos="flip-left" data-aos-delay="200">
                                         <h3>Nombre: ${itemPersonaje.name}</h3>
@@ -36,7 +34,6 @@ function pedidoFetch (pagina) {
         return data.json();
     }).then((data)=>{
         totalPersonajes = data.results;
-        // personajes es un array de objetos
         mostrarEnElHtml(totalPersonajes);
     })
 };
@@ -71,16 +68,15 @@ function anteriorPagina () {
 function primeraPagina () {
     paginaActual=1;
     pedidoFetch(1)
-    
+
 }
 
 // 42 paginas
 function ultimaPagina () {
     paginaActual=42;
     pedidoFetch(paginaActual);
-    
-}
 
+}
 
 
 botonSiguientePagina.addEventListener('click',siguientePagina);
