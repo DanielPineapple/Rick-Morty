@@ -16,7 +16,7 @@ function mostrarEnElHtml (arrPersonajes) {
     divPersonajes.innerHTML='';
     // ahora le agregamos los personajes nuevos que queres mostrar
     arrPersonajes.forEach((itemPersonaje)=>{
-        divPersonajes.innerHTML+=` <div class="personaje">
+        divPersonajes.innerHTML+=` <div class="personaje hvr-wobble-to-bottom-right" data-aos="flip-left" data-aos-delay="200">
                                         <h3>Nombre: ${itemPersonaje.name}</h3>
                                         <p>Genero: ${itemPersonaje.gender}</p>
                                         <p>Especie: ${itemPersonaje.species}</p>

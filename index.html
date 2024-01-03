@@ -6,6 +6,8 @@
     <title>Rick | & | Morty</title>
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/nav.css">
+    <link rel="stylesheet" href="./styles/hover.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <header class="header">  <!-- Inicio Header-->
@@ -36,8 +38,8 @@
 <!---->        <div id="mobile-menu" class="overlay">
 <!---->            <a onclick="closeNav()" class="close">&times;</a>
 <!---->            <div class="overlay-content">
-<!---->                <a href="#PROYECT" data-ancla="PROYECT">PROYECT</a>
-<!---->                <a href="#CONTACT" data-ancla="CONTACT">CONTACT</a>
+<!---->                <a onclick="closeNav()" href="#PROYECT" data-ancla="PROYECT">PROYECT</a>
+<!---->                <a onclick="closeNav()" href="#CONTACT" data-ancla="CONTACT">CONTACT</a>
 <!---->            </div>
 <!---->        </div>
     </header>
@@ -91,5 +93,9 @@
     <script src="./js/api.js"></script>
     <script type="text/javascript" src="./js/nav.js"></script>
     <script src="./js/filtros.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
 </body>
 </html>

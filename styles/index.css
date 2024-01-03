@@ -88,6 +88,13 @@ align-items: center;
 
 }
 
+@media (max-width: 360px×640px) {
+    .hero {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
     .hero::before {
         content: '';
         background-color: rgba(0, 0, 0, 0);
