@@ -13,14 +13,15 @@ let paginaActual=1;
 // funcion para mostrar los personajes
 function mostrarEnElHtml (arrPersonajes) {
     divPersonajes.innerHTML='';
+    console.log(arrPersonajes);
     arrPersonajes.forEach((itemPersonaje)=>{
         divPersonajes.innerHTML+=` <div class="personaje hvr-wobble-to-bottom-right" data-aos="flip-left" data-aos-delay="200">
                                         <h3>Nombre: ${itemPersonaje.name}</h3>
                                         <p>Genero: ${itemPersonaje.gender}</p>
                                         <p>Especie: ${itemPersonaje.species}</p>
                                         <p>Estado: ${itemPersonaje.status}</p>
-                                        <p>Origen: ${itemPersonaje.origin}</p>
-                                        <p>Locación: ${itemPersonaje.location}</p>
+                                        <p>Origen: ${itemPersonaje.origin.name}</p>
+                                        <p>Locación: ${itemPersonaje.location.name}</p>
                                         <img src=${itemPersonaje.image}>
                                     </div>`
     })
@@ -68,6 +69,10 @@ function anteriorPagina () {
 function primeraPagina () {
     paginaActual=1;
     pedidoFetch(1)
+    botonAnteriorPagina.disabled=true;
+    botonPrimeraPagina.disabled=true;
+    botonSiguientePagina.disabled=false;
+    botonUltimaPagina.disabled=false;
 
 }
 
@@ -75,7 +80,10 @@ function primeraPagina () {
 function ultimaPagina () {
     paginaActual=42;
     pedidoFetch(paginaActual);
-
+    botonUltimaPagina.disabled=true;
+    botonSiguientePagina.disabled=true;
+    botonAnteriorPagina.disabled=false;
+    botonPrimeraPagina.disabled=false;
 }
 
 
