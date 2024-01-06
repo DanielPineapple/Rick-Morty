@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&family=Single+Day&display=swap');
 
+*,
+*::before
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     background-color: black;
     font-family: 'Single Day';
@@ -13,17 +21,6 @@ header {
     padding: 0.5rem;
     border-radius: 50px;
     font-family: 'Single Day';
-}
-
-@media only screen and (max-width: 500px) {
-    
-    header {
-        width: 360px;
-    }
-}
-
-ul {
-    list-style: none;
 }
 
 .estrellas{
@@ -100,13 +97,6 @@ align-items: center;
         border-radius: 50px;
 }
 
-@media screen and (max-width: 780px) {
-.hero{
-    margin: auto;
-    width: 90%;
-    }
-}
-
     .hero::before {
         content: '';
         background-color: rgba(0, 0, 0, 0);
@@ -121,7 +111,6 @@ align-items: center;
     .hero__content {
         display: flex;
         flex-wrap: wrap;
-        justify-content: start;
         flex-direction: column;
         gap: 2rem;
         align-items: start;
@@ -129,11 +118,6 @@ align-items: center;
         position: relative;
 }
 
-@media only screen and (max-width: 780px) {
-    .hero__content {
-        width: 360px;
-    }
-}
 
     .hero__title {
         text-align: center; 
@@ -213,31 +197,25 @@ align-items: center;
             padding: 10px;
 }
 
-@media only screen and (max-width: 780px) {
-    .personaje {
-        width: 100%;
-    }
-}
-
 .paginado {
     display: flex;
     justify-content: center;
     padding: 10px;
 }
 
-.footer {
+.pie {
     background:purple;
     color: white;
-    width: 100%;
+    width: auto;
     height: 300px;
     display: flex;
     justify-content: center;
 
 }
 
-@media only screen and (max-width: 780px) {
-    .footer {
-        width: 100%;
+@media screen and (max-width: 780px) {
+    .pie {
+        width: auto;
     }
 }
 
@@ -257,9 +235,36 @@ align-items: center;
     height: 200px;
 }
 
-@media only screen and (max-width: 780px) {
+@media screen and (max-width: 780px) {
     .logo__foot {
         width: 0px;
         height: 0px;
+    }
+}
+
+
+@media screen and (max-width: 480px){
+    section {
+        height: auto;
+    }
+    div {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 480px){
+    htlm {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    .hero{
+        width: auto;
+    }
+
+    .hero__title {
+        display: none;
     }
 }
