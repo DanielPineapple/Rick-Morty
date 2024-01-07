@@ -16,13 +16,16 @@ function mostrarEnElHtml (arrPersonajes) {
     console.log(arrPersonajes);
     arrPersonajes.forEach((itemPersonaje)=>{
         divPersonajes.innerHTML+=` <div class="personaje hvr-wobble-to-bottom-right" data-aos="flip-left" data-aos-delay="200">
+                                        <img src=${itemPersonaje.image}>
                                         <h3>Nombre: ${itemPersonaje.name}</h3>
+                                        <details>
+                                        <summary class="btn_details">Ver mas...</summary>
                                         <p>Genero: ${itemPersonaje.gender}</p>
                                         <p>Especie: ${itemPersonaje.species}</p>
                                         <p>Estado: ${itemPersonaje.status}</p>
                                         <p>Origen: ${itemPersonaje.origin.name}</p>
                                         <p>Locación: ${itemPersonaje.location.name}</p>
-                                        <img src=${itemPersonaje.image}>
+                                        </details>
                                     </div>`
     })
 }
@@ -90,4 +93,4 @@ function ultimaPagina () {
 botonSiguientePagina.addEventListener('click',siguientePagina);
 botonAnteriorPagina.addEventListener('click',anteriorPagina);
 botonPrimeraPagina.addEventListener('click',primeraPagina);
-botonUltimaPagina.addEventListener('click', ultimaPagina)
+botonUltimaPagina.addEventListener('click', ultimaPagina);

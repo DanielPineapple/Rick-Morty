@@ -13,6 +13,9 @@ html {
     font-family: 'Single Day';
 }
 
+ul{
+    list-style: none;
+}
 /* Header */
 
 header {
@@ -195,6 +198,11 @@ align-items: center;
             border: 2px solid greenyellow;
             border-radius: 13px;
             padding: 10px;
+            background: linear-gradient(greenyellow, black);
+}
+
+.btn_details {
+    color: greenyellow;
 }
 
 .paginado {
