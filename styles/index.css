@@ -92,12 +92,12 @@ align-items: center;
 
     .hero {
         background-image: url(../img/Imagen\ de\ WhatsApp\ 2023-12-28\ a\ las\ 00.06.06_9bfe3a2c.jpg);
-        padding: 12.8rem;
         background-position: top;
         background-size: cover;
         background-attachment: fixed;
         position: relative;
         border-radius: 50px;
+        height: 100%;
 }
 
     .hero::before {
@@ -113,16 +113,16 @@ align-items: center;
 
     .hero__content {
         display: flex;
-        flex-wrap: wrap;
         flex-direction: column;
-        gap: 2rem;
+        gap: var(--spacing-20);
         align-items: start;
         z-index: 2;
         position: relative;
 }
 
-
     .hero__title {
+        width: 100%;
+        padding-bottom: 50px;
         text-align: center; 
         font-family: 'Single Day'; 
         font-weight:bold; 
@@ -134,6 +134,8 @@ align-items: center;
     
 
     .hero__text {
+        width: 100%;
+        padding-bottom: 200px;
         text-align: center; 
         font-family: 'Single Day'; 
         font-weight:bold; 
@@ -273,6 +275,10 @@ align-items: center;
     }
 
     .hero__title {
-        display: none;
+        text-align: start;
+    }
+
+    .hero__content{
+        text-align: start;
     }
 }
