@@ -184,6 +184,14 @@ align-items: center;
             border-radius: 50px;
         }
 
+        .total__pj {
+            color: white;
+        }
+
+        #cantidadPersonajes {
+            color: greenyellow;
+        }
+
         .contenido {
             display: flex;
         }

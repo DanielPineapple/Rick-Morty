@@ -2,7 +2,8 @@
     let botonFiltroTodo = document.getElementById('filtroTodo');
     let botonFiltroMujer = document.getElementById('filtroMujer');
     let botonFiltroHombre = document.getElementById('filtroHombre');
-    let botonFiltroUnknown = document.getElementById('filtroUnknown')
+    let botonFiltroUnknown = document.getElementById('filtroUnknown');
+    let botonFiltroGenderless = document.getElementById('filtroGenderless');
 
     // Eventos
 // 1- Nos traemos el elemento html que queremos agregarle el evento
@@ -36,9 +37,17 @@ function filtroUnknown () {
     mostrarEnElHtml(unknown);
 }
 
+function filtroGenderless () {
+    let Genderless = totalPersonajes.filter((itemPersonaje)=>{
+        return itemPersonaje.gender==='Genderless'
+    });
+    mostrarEnElHtml(Genderless);
+}
+
 // Crear evento
 // elementoHTML.addEventListener('tipo de evento', funcion que se ejecuta cuando se da el evento)
 botonFiltroMujer.addEventListener('click',filtroMujer);
 botonFiltroHombre.addEventListener('click',filtroHombre);
 botonFiltroTodo.addEventListener('click',filtroTodo);
 botonFiltroUnknown.addEventListener('click', filtroUnknown);
+botonFiltroGenderless.addEventListener('click',filtroGenderless);

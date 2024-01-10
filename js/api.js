@@ -10,21 +10,29 @@ let botonUltimaPagina = document.getElementById('ultimaPagina');
 let totalPersonajes;
 let paginaActual=1;
 
+//funcion mostrar total de personajes 
+let spanCantidadPersonajes = document.getElementById('cantidadPersonajes');
+
 // funcion para mostrar los personajes
 function mostrarEnElHtml (arrPersonajes) {
+    let numeroPersonajes = arrPersonajes.length;
+    spanCantidadPersonajes.innerText = numeroPersonajes;
     divPersonajes.innerHTML='';
     console.log(arrPersonajes);
     arrPersonajes.forEach((itemPersonaje)=>{
         divPersonajes.innerHTML+=` <div class="personaje hvr-wobble-to-bottom-right" data-aos="flip-left" data-aos-delay="200">
                                         <img src=${itemPersonaje.image}>
                                         <h3>Nombre: ${itemPersonaje.name}</h3>
-                                        <details>
-                                        <summary class="btn_details">Ver mas...</summary>
                                         <p>Genero: ${itemPersonaje.gender}</p>
                                         <p>Especie: ${itemPersonaje.species}</p>
                                         <p>Estado: ${itemPersonaje.status}</p>
                                         <p>Origen: ${itemPersonaje.origin.name}</p>
                                         <p>Locación: ${itemPersonaje.location.name}</p>
+                                        <details>
+                                        <summary class="btn_details">Ver mas...</summary>
+                                        <p>Creado: ${itemPersonaje.created}</p>
+                                        <p>ID: ${itemPersonaje.id}</p>
+                                        <p>Episodio: ${itemPersonaje.url}</p>
                                         </details>
                                     </div>`
     })
@@ -65,8 +73,14 @@ function siguientePagina () {
 
 function anteriorPagina () {
     paginaActual--;
+    if(paginaActual===1){
+        botonAnteriorPagina.disabled=true;
+        botonPrimeraPagina.disabled=true;    
+    } else {
+        botonSiguientePagina.disabled=false;
+        botonUltimaPagina.disabled=false;
+    }
     pedidoFetch(paginaActual);
-    
 };
 
 function primeraPagina () {
