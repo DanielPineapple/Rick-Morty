@@ -143,6 +143,7 @@ align-items: center;
         color: rgb(181, 100, 243); 
         text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68, 6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68;
         }
+/*Aquí comienzo el contenido*/
 
         .main-container {
             justify-content: center;
@@ -154,6 +155,8 @@ align-items: center;
             color: white;
             text-align: center;
         }
+
+        /*Filtros de las tarjetas*/
     
         .filtros {
             display: flex;
@@ -184,6 +187,8 @@ align-items: center;
             border-radius: 50px;
         }
 
+        /*Tarjetas de los personajes*/
+
         .total__pj {
             color: white;
         }
@@ -211,15 +216,21 @@ align-items: center;
             background: linear-gradient(greenyellow, black);
 }
 
+/*botón "ver mas" de las tarjetas*/
+
 .btn_details {
     color: greenyellow;
 }
+
+/*Botones de paginación*/
 
 .paginado {
     display: flex;
     justify-content: center;
     padding: 10px;
 }
+
+/*footer*/
 
 .pie {
     background:purple;
@@ -252,6 +263,8 @@ align-items: center;
     width: 200px;
     height: 200px;
 }
+
+/*hago responsive*/
 
 @media screen and (max-width: 780px) {
     .logo__foot {

@@ -93,7 +93,7 @@ function primeraPagina () {
 
 }
 
-// 42 paginas
+
 function ultimaPagina () {
     paginaActual=42;
     pedidoFetch(paginaActual);
